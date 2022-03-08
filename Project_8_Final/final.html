@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--Bijan Emami 5/13/2021-->
+
+<html lang="en">
+
+<head>
+    <title>JavaScript Game!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="outerwrapper">
+        <header>
+
+        </header>
+        <nav>
+
+        </nav>
+        <main>
+            <img src="oldman.png" id="myImage" alt="man image">
+            <span id="jsMessage"></span>
+            <div class="math">
+                <h1>Let's do math!!</h1>
+                <h1>Enter 2 numbers, select the operator, and then click calculate.</h1>
+
+                <!-- Form for operator numbers input -->
+                <form>
+                    <label for="num1">Number 1:</label>
+                    <input type="number" id="num1" name="num1"><br><br>
+                    <label for="num2">Number 2:</label>
+                    <input type="number" id="num2" name="num2"><br><br>
+
+                </form>
+
+                <h1>Select a operator</h1>
+
+                <label for="operator">Choose a operator:</label>
+
+                <!-- Selection options for operators-->
+
+                <select name="operator" id="operator">
+                    <option value="add">+ add</option>
+                    <option value="- subtract">- subtract</option>
+                    <option value="* multiply">* multiply</option>
+                    <option value="/ divide">/ divide</option>
+                    <option value="% modulus">% modulus</option>
+                    <option value="** power">** power</option>
+
+                </select>
+
+                <!-- Operator button and result -->
+
+                <button id="calculate">Calculate</button>
+                <br>Answer:
+                <span id="answer"></span>
+            </div>
+
+            <!-- Comparisons time -->
+            <div class="comparison">
+                <h1>It's comparison time!!</h1>
+
+                <h2>Select whether the statement is true or false.</h2>
+
+                <div class="comparison">1. 5 > 2
+                    <button id="True1">True</button>
+                    <button id="False1">False</button>
+                    <span id="q1"></span>
+                </div>
+                <div class="comparison">2. 9 &lt; 8 <button id="True2">True</button>
+                    <button id="False2">False</button>
+                    <span id="q2"></span>
+                </div>
+                <div class="comparison">3. 100 >= 100 <button id="True3">True</button>
+                    <button id="False3">False</button>
+                    <span id="q3"></span>
+                </div>
+                <div class="comparison">4. 100 &lt;= 90 <button id="True4">True</button>
+                    <button id="False4">False</button>
+                    <span id="q4"></span>
+                    <br>
+                    <span id="s1">Score: </span><span id="score1">0</span>
+                </div>
+            </div>
+            <!--Quiz portion-->
+            <div class="quiz">
+                <h1>Pop Quiz Hotshot!!</h1>
+                <div>
+                    <p>Which example returns false?</p>
+                    <ol>
+                        <li><input type="radio" name="quiz1" class="quiz1" id="a1">false == 0</li>
+                        <li><input type="radio" name="quiz1" class="quiz1" id="a2">NaN == NaN</li>
+                        <!--false-->
+                        <li><input type="radio" name="quiz1" class="quiz1" id="a3">0 == ""</li>
+                        <li><input type="radio" name="quiz1" class="quiz1" id="a4">"" == false</li>
+                    </ol>
+                    <button id="btn1">Click for the answer</button>
+                    <span id="msg1"> ??</span>
+                </div>
+
+                <div>
+                    <p>Which example returns true?</p>
+                    <ol>
+                        <li><input type="radio" name="quiz2" class="quiz2" id="b1">77 === '77'</li>
+                        <li><input type="radio" name="quiz2" class="quiz2" id="b2">false === 0</li>
+                        <li><input type="radio" name="quiz2" class="quiz2" id="b3">'cat' === 'dog'</li>
+                        <li><input type="radio" name="quiz2" class="quiz2" id="b4">'hello world' === 'hello world'</li>
+                        <!--true-->
+                    </ol>
+                    <button id="btn2">Click for the answer</button>
+                    <span id="msg2"> ??</span>
+                </div>
+
+                <div>
+                    <p>Which return is actually true?</p>
+                    <ol>
+                        <li id="c1-li" class="quiz3"><input type="radio" name="quiz3" id="c1">3 !== "3" // false</li>
+                        <!--true-->
+                        <li id="c2-li" class="quiz3"><input type="radio" name="quiz3" id="c2">null !== null // false
+                        </li>
+                        <li id="c3-li" class="quiz3"><input type="radio" name="quiz3" id="c3">3 !== 3 // false</li>
+                        <li id="c4-li" class="quiz3"><input type="radio" name="quiz3" id="c4">true !== true // false
+                        </li>
+                    </ol>
+                    <button id="btn3">Click for the answer</button>
+                    <span id="msg3"> ??</span>
+                </div>
+
+                <div>
+                    <p>Which return is actually false?</p>
+                    <ol>
+                        <li id="d1-li" class="quiz4"><input type="radio" name="quiz4" id="d1">"hello" != "hola" // true
+                        </li>
+                        <li id="d2-li" class="quiz4"><input type="radio" name="quiz4" id="d2">null != undefined // true
+                        </li>
+                        <!--false-->
+
+                        <li id="d3-li" class="quiz4"><input type="radio" name="quiz4" id="d3">1 != 2 // true</li>
+                        <li id="d4-li" class="quiz4"><input type="radio" name="quiz4" id="d4">0 != null // true</li>
+                    </ol>
+                    <button id="btn4">Click for the answer</button>
+                    <span id="msg4"> ??</span>
+                    <br>
+                    <br>
+                    <span id="s2">Score: </span><span id="score2">0</span>
+                </div>
+                <br>
+                <br>
+                <span id="final">Final Score: </span><span id="finalScore">0</span>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+    <script src="game1.js">
+
+    </script>
+</body>
+
+</html>
